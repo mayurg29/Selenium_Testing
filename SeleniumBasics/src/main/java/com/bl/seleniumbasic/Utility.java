@@ -91,7 +91,7 @@ public class Utility extends Base{
 			
 			TakesScreenshot ts = (TakesScreenshot) webDriver;
 			File srcFile = ts.getScreenshotAs(OutputType.FILE);
-			File destFile = new File("\\src\\main\\resources\\screenshot" + date + "HomePage.png");
+			File destFile = new File(System.getProperty("user.dir") + "\\screenshot\\" + date + "HomePage.png");
 			FileUtils.copyFile(srcFile, destFile);
 			
 		} catch (Exception e) {
